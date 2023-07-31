@@ -1,0 +1,342 @@
+
+------ Host: "peperina" ----------Mon Jul 31 09:27:06 2023
+
+ /home/pont/Documents/trabajo/mctdh_sample_files/MCTDHtutorials/oscillator_tests/test_oscilador
+
+ PID =   153251
+
+--------------------------------------------------------------------------------
+****** Source code version ******
+
+Program Version :     8
+Release         :     6
+Revision        :     5
+
+Heidelberg SVN repository no.: 1494
+Checkin date: Fri, 30 Jun 2023, 17:03:57
+Compiled: Thu, 27 Jul 2023, 09:10:31 ; Host: peperina
+Program name: mctdh86
+
+Included surfaces: lsth
+
+Default operator-path: /home/pont/programas/mctdh86.5/operators
+ ###  time-not-fs   is set!  ###
+ ###  energy-not-ev is set!  ###
+--------------------------------------------------------------------------------
+
+###############                 NEW RUN                  ###############
+
+******* OPTIONS ******
+-mnd
+
+
+########################################################################
+
+ Reading Input Files
+
+########################################################################
+
+Task: gendvr genoper geninwf propagation
+
+Opening operator file :/home/pont/Documents/trabajo/mctdh_sample_files/MCTDHtutorials/oscillator_tests/operator_file.op
+
+***** Hamiltonian and title *****
+
+		2D oscilator + interaction perturbativa
+
+Parameter values taken from .op file
+
+Operator labels taken from .op file
+
+Assigning Operators From Library
+
+
+***** Paths and input files *****
+
+~.inp  file copied to input in name directory
+name      : /home/pont/Documents/trabajo/mctdh_sample_files/MCTDHtutorials/oscillator_tests/test_oscilador
+input     : /home/pont/Documents/trabajo/mctdh_sample_files/MCTDHtutorials/oscillator_tests/input_file.inp
+DVR file  : /home/pont/Documents/trabajo/mctdh_sample_files/MCTDHtutorials/oscillator_tests/test_oscilador
+.op file  : /home/pont/Documents/trabajo/mctdh_sample_files/MCTDHtutorials/oscillator_tests/operator_file.op
+INWF file : /home/pont/Documents/trabajo/mctdh_sample_files/MCTDHtutorials/oscillator_tests/test_oscilador
+cross-ref : /home/pont/Documents/trabajo/mctdh_sample_files/MCTDHtutorials/oscillator_tests/test_oscilador/restart
+
+overwrite disabled
+
+
+WARNING in subroutine Chkprop:
+Symmetric Hamiltonian and real initial state assumed when calculating
+autocorrelation function. Use "cross" if these conditions are not fulfilled.
+------------------------------------
+
+Timing file opened
+
+########################################################################
+
+ Creating DVR file: /home/pont/Documents/trabajo/mctdh_sample_files/MCTDHtutorials/oscillator_tests/test_oscilador/dvr
+                                                         Jul 31 09:27:06
+########################################################################
+
+***** Memory used in DVR basis generation *****
+
+Memory size (used / allocated) (in Mb):      0.999 /      4.143
+
+** Array dimensions **
+
+length of complex      array (used):           6          0.000 MB
+length of real         array (used):       18314          0.140 MB
+length of integer      array (used):           5          0.000 MB
+length of logical      array (used):           2          0.000 MB
+
+total array memory in mb     (used):         0.1
+
+
+
+****** Primitive Basis *********
+
+ mode     kappa    DVR    N        xi         xf         dx       p-max
+
+ X1           1    sin   51    -10.000     10.000   0.400000      7.703
+ X2           2    sin   51    -10.000     10.000   0.400000      7.703
+
+
+********* SPF Basis ************
+
+ mode        N    n      dof's
+
+    1       51    2       1
+    2       51    2       2
+
+ Total grid size       :     2601     2.601E+03
+ Length of A-vector    :        4     4.000E+00
+ Length of Phi-vectors :      204     2.040E+02
+ Length of WF-vector   :      208     2.080E+02
+
+
+########################################################################
+
+ Creating OPER file: /home/pont/Documents/trabajo/mctdh_sample_files/MCTDHtutorials/oscillator_tests/test_oscilador/oper
+                                                         Jul 31 09:27:06
+########################################################################
+
+***** Memory used in OPERATOR generation *****
+
+Memory size (used / allocated) (in Mb):      1.381 /      4.525
+
+** Array dimensions **
+
+length of complex      array (used):       10609          0.162 MB
+length of real         array (used):       47178          0.360 MB
+length of integer      array (used):           4          0.000 MB
+length of logical      array (used):           2          0.000 MB
+
+total array memory in mb     (used):         0.5
+
+ *** RUNOPER include-array dimensions ***
+k   :  minkoe, maxkoe       7    4000
+h   :  htmdim, maxhtm      14    4000
+hl  :  hopdim, maxhop      13    4000
+nh  :  minfac, maxfac       2     200
+np  : npesopt, maxpes       0       1
+muld: mulddim,maxmuld       1      10
+n   :    ndef, maxdef       0     240
+n   :    npar, maxpar       3       3
+n   :    nrdf, maxrdf       0       0
+minnhtmshift,maxnhtmshift       0      10
+** Preliminary! See op.log file for final values.
+
+***** Operator details *****
+
+DOF no.    label
+    1       X1
+    2       X2
+
+Mode     DOFs
+   1    1=      X1
+   2    2=      X2
+
+ feb =  0,  meb =  0,   fpb =  0,  mpb =  0,  mkoe =  3
+ leb = F,  lmult = F,  lmulpack = F,  lcap = F
+
+########################################################################
+
+Creating RESTART file
+                                                         Jul 31 09:27:06
+########################################################################
+
+
+****** Initial SPF Functions *********
+  1  X1         gauss   1  p0 =   0.00000  x0 =   1.20000  dx =   1.41421
+  2  X2         gauss   1  p0 =   0.00000  x0 =  -1.50000  dx =   1.41421
+
+***** Length of psi vector *****
+
+Overall length of A-vector      :        4    4.000E+00
+Length of phi vector for mode   1:      102
+Length of phi vector for mode   2:      102
+                                  --------
+Length of wavefunction vector   :      208    2.080E+02
+
+workcdim   :       102   1.020E+02
+workrdim   :        51   5.100E+01
+workidim   :         1
+
+***** Memory used in WAVEFUNCTION generation *****
+
+Memory size (used / allocated) (in Mb):      0.958 /      4.101
+
+** Array dimensions **
+
+length of psi/dtpsi    array (used):         208          0.003 MB
+length of complex      array (used):         596          0.009 MB
+length of real         array (used):       10790          0.082 MB
+length of integer      array (used):           6          0.000 MB
+length of logical      array (used):           3          0.000 MB
+
+total array memory in mb     (used):         0.1
+
+**** Reading OPER file ****
+		2D oscilator + interaction perturbativa
+Created on:
+------ Host: "peperina" ----------Mon Jul 31 09:27:06 2023
+
+
+*** PARAMETER ***
+ veigen : minedim,    maxedim       0      50
+ timing : nsub,       maxsub       38     100
+ eingabe: nreadspf,maxreadspf       0      10
+
+########################################################################
+
+ Propagating Wavefunction
+                                                         Jul 31 09:27:06
+########################################################################
+ hopsdim  =       5407        0.041 MB
+ dgldim   =        208        0.003 MB
+ pmatdim  =         16        0.000 MB
+ hpsidim  =        102        0.002 MB
+ hlochdim =          8        0.000 MB
+ mfsumdim =        408        0.006 MB
+ intpsidim=       1122        0.017 MB
+ intrdim  =         44        0.000 MB
+ workcdim =        408        0.006 MB
+ workrdim =        143        0.001 MB
+
+***** Memory used in wavefunction PROPAGATION *****
+
+Memory size (used / allocated) (in Mb):      0.997 /      4.140
+
+** Array dimensions **
+
+length of psi/dtpsi    array (used):         208          0.003 MB
+length of complex      array (used):        2997          0.046 MB
+length of real         array (used):       11148          0.085 MB
+length of integer      array (used):           6          0.000 MB
+length of logical      array (used):           3          0.000 MB
+
+total array memory in mb     (used):         0.1
+
+**** Global array sizes ****
+
+Minimum value for maxdim:       2  Present value:       4
+Minimum value for maxsta:       1  Present value:       1
+Minimum value for maxsub:      38  Present value:     100
+Minimum value for maxkoe:       1  Present value:    4000
+
+**** Reading OPER file ****
+		2D oscilator + interaction perturbativa
+Created on:
+------ Host: "peperina" ----------Mon Jul 31 09:27:06 2023
+
+
+**** RSTINFO: Reading RESTART file ****
+Type : wavefunction, file-version =  8.60050
+Created on:
+------ Host: "peperina" ----------Mon Jul 31 09:27:06 2023
+
+
+***** Calculation type *****
+
+Wavefunction propagation.
+Using Schroedinger picture.
+
+***** Integrator algorithm *****
+
+Mean-fields etc. are kept constant.
+CMF stepsize is adaptive (error control for A and phi).
+CMF accuracy: 1.00E-06,      Initial stepsize:  0.010 au
+For SPFs, For spfs, BS integrator
+order:  9,  accuracy: 1.00E-07,  initial step: 5.00E-03 au
+For A-coefficients, SIL integrator
+order:  10,  accuracy: 1.00E-06,  initial step:  0.005 au
+error criterion: standard
+Standard-SIL (real) used.
+The working equation for the spfs reads:
+i dphi/dt = (1-P)(h + ...) phi
+Using standard orbitals.
+Using operator symmetries
+
+***** Numerical parameters *****
+
+Machine precision:                                    2.220E-16
+Parameter used to regularise inverse density matrix:  1.000E-08
+Parameter used to regularise SVD singular values   :  0.000E+00
+Parameter used to regularise natural orbital matrix:  1.000E-08
+
+******** Flags  ********
+
+
+***** Output files *****
+
+Stop        file created
+Output      file opened
+Psi         file opened  (single)
+Check       file opened
+Gridpop     file opened
+Pdensity    file opened
+Speed       file opened
+Auto        file opened  (once)
+Steps       file opened
+Update      file opened
+ time[fs]        6.290
+
+***** Integration method *****
+
+Integration method used for the MCTDH-coefficients:
+Short iterative Lanczos (real) with variable order.
+Maximum order employed:   3
+Maximum order allowed:   10
+
+Integration method used for the single-particle functions:
+Bulirsch-Stoer (BS) with polynomial extrapolation.
+Optimal column:  9
+
+Number of succesful large BS steps:             3774
+Number of failed but fixed large BS steps:         0
+Total number of small BS steps:                23618
+
+Number of successful Lanczos steps:            1887
+Number of failed but fixed Lanczos steps:         0
+
+***** Update times *****
+
+Number of successful update steps:   629
+Number of failed update steps:         0
+Mean update time (in au):        0.01000
+Standard deviation (in au):      0.00000
+
+***** God's final message *****
+
+Program terminated normally.
+
+***** Overall Timing *****
+
+Total cpu time     [s] :          0.70
+Total system time  [s] :          0.22
+Wall time          [s] :          0.94
+total time/wall time   :          0.98
+Total time     [h:m:s] :    0 :  0 :  0.92
+Wall  time     [h:m:s] :    0 :  0 :  0.94
+
+------ Host: "peperina" ----------Mon Jul 31 09:27:07 2023
+

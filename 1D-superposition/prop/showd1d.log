@@ -1,0 +1,25 @@
+
+--------------------------------------------------------------------------------
+****** Source code version ******
+
+Program Version :     8
+Release         :     6
+Revision        :     3
+
+Heidelberg SVN repository no.: 1427
+Checkin date: Fri, 13 Jan 2023, 16:12:38
+Compiled: Tue, 31 Jan 2023, 17:24:35 ; Host: federico-X510UQR
+Program name: showd1d86
+--------------------------------------------------------------------------------
+
+  *** Memory allocated dynamically ***
+ real*8     :       16898
+ real*4     :         258
+ Total   :   136216 Bytes ,       0.13 MB
+--------------------------------------------------------------------------------
+
+gridpop : /home/federico/Dropbox/trabajo/estudiantes/javierduarte/sum_restart_files/prop/gridpop
+dvr     : /home/federico/Dropbox/trabajo/estudiantes/javierduarte/sum_restart_files/prop/dvr
+output  : /home/federico/Dropbox/trabajo/estudiantes/javierduarte/sum_restart_files/prop/den1d_f1
+--------------------------------------------------------------------------------
+

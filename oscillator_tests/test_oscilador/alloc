@@ -1,0 +1,29 @@
+
+# ------ Host: "peperina" ----------Mon Jul 31 09:27:06 2023
+
+# /home/pont/Documents/trabajo/mctdh_sample_files/MCTDHtutorials/oscillator_tests/test_oscilador
+
+maxdim    =       4
+maxsta    =       1
+maxtape   =       0
+maxdepth  =       0
+maxham    =       1
+maxpar    =       3
+maxpes    =       1
+maxrdf    =       0
+maxkoe    =    4000,    default =    4000
+maxhtm    =    4000,    default =    4000
+maxhop    =    4000,    default =    4000
+maxfac    =     200,    default =     200
+maxdef    =     240,    default =     240
+maxmuld   =      10,    default =      10
+maxsub    =     100,    default =     100
+maxLMR    =      20,    default =      20
+maxedim   =      50,    default =      50
+maxreadspf=      10,    default =      10
+maxnhtmshift =   10,    default =      10
+end-alloc
+
+# Run "phelp <parametername>" to see the meaning of the parameter.
+# Or see HTML docu: Input Documentation/Alloc-Section
+

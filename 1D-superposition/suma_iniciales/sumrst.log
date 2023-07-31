@@ -1,0 +1,186 @@
+
+--------------------------------------------------------------------------------
+****** Source code version ******
+
+Program Version :     8
+Release         :     5
+Revision        :    14
+
+Heidelberg SVN repository no.: 1312
+Checkin date: Wed, 23 Jun 2021, 13:43:30
+Compiled: Wed, 15 Jun 2022, 18:27:06 ; Host: federico-X510UQR
+Program name: sumrst85
+--------------------------------------------------------------------------------
+
+
+                    INPUT FILE (copy)
+********************************************************************************
+RUN-SECTION
+  name      = suma_iniciales
+  normalize
+end-run-section
+INIT_WF-SECTION
+ file  = state0
+ coeff = 0.0,1.0
+ file  = state1
+ coeff = 1.0
+end-init_wf-section
+end-input
+********************************************************************************
+
+ Command line options : -w add_restart.inp 
+
+ The new restart file is : /home/federico/Dropbox/trabajo/estudiantes/javierduarte/sum_restart_files/suma_iniciales/restart
+
+ Channel 591 opened : /home/federico/Dropbox/trabajo/estudiantes/javierduarte/sum_restart_files/state0/restart
+ Channel 592 opened : /home/federico/Dropbox/trabajo/estudiantes/javierduarte/sum_restart_files/state1/restart
+
+Coefficients "C_i" for superposition:
+
+   i       Re[C_i]       Im[C_i]
+--------------------------------------------
+   1      0.00000000      1.00000000
+   2      1.00000000      0.00000000
+
+
+Output WF will be normalized to:      1.00000000
+
+
+**** RSTINFO: Reading RESTART file ****
+Type : wavefunction, file-version =  8.60030
+Created on:
+------ Host: "peperina" ----------Tue May  9 15:01:36 2023
+
+ adim, totphidim, dgldim:          1        128        129
+
+**** RSTINFO: Reading RESTART file ****
+Type : wavefunction, file-version =  8.60030
+Created on:
+------ Host: "peperina" ----------Tue May  9 15:01:49 2023
+
+ adim, totphidim, dgldim:          1        128        129
+
+--------------------------------------------------------------------------------
+****** Source code version ******
+
+Program Version :     8
+Release         :     5
+Revision        :    14
+
+Heidelberg SVN repository no.: 1312
+Checkin date: Wed, 23 Jun 2021, 13:43:30
+Compiled: Wed, 15 Jun 2022, 18:27:06 ; Host: federico-X510UQR
+Program name: sumrst85
+--------------------------------------------------------------------------------
+
+  *** Memory allocated dynamically ***
+ complex*16 :         795
+ real*8     :          11
+ integer    :           4
+ logical    :           2
+ complex*8  :           2
+ real*4     :           2
+ Total   :          13088. Bytes ,       0.01 MB
+--------------------------------------------------------------------------------
+
+
+**** RSTINFO: Reading RESTART file ****
+Type : wavefunction, file-version =  8.60030
+Created on:
+------ Host: "peperina" ----------Tue May  9 15:01:36 2023
+
+
+**** RSTINFO: Reading RESTART file ****
+Type : wavefunction, file-version =  8.60030
+Created on:
+------ Host: "peperina" ----------Tue May  9 15:01:49 2023
+
+
+**** RSTINFO: Reading RESTART file ****
+Type : wavefunction, file-version =  8.60030
+Created on:
+------ Host: "peperina" ----------Tue May  9 15:01:36 2023
+
+
+**** RSTINFO: Reading RESTART file ****
+Type : wavefunction, file-version =  8.60030
+Created on:
+------ Host: "peperina" ----------Tue May  9 15:01:49 2023
+
+
+**** RSTINFO: Reading RESTART file ****
+Type : wavefunction, file-version =  8.60030
+Created on:
+------ Host: "peperina" ----------Tue May  9 15:01:49 2023
+
+
+**** RSTINFO: Reading RESTART file ****
+Type : wavefunction, file-version =  8.60030
+Created on:
+------ Host: "peperina" ----------Tue May  9 15:01:36 2023
+
+
+**** RSTINFO: Reading RESTART file ****
+Type : wavefunction, file-version =  8.60030
+Created on:
+------ Host: "peperina" ----------Tue May  9 15:01:49 2023
+
+
+******* QUALITY OF THE SUPERPOSITION *******
+
+Overlaps O_ij=<psi_i|psi_j> of initial WFs:
+
+   i   j     Re[O_ij]        Im[O_ij]
+--------------------------------------------
+   1   1  0.10000000E+01  0.00000000E+00
+   2   1 -0.23017650E-16  0.00000000E+00
+   1   2 -0.23017650E-16 -0.00000000E+00
+   2   2  0.10000000E+01  0.00000000E+00
+
+Overlaps S_i=<psi_superpos|psi_i>:
+
+   i        Re[S_i]         Im[S_i]
+--------------------------------------------
+   1      0.41874715E-16 -0.10000000E+01
+   2      0.10000000E+01  0.23280582E-17
+
+Same using the coefficients C_i and over-
+laps O_ij as S1_i = sum_j conjg(C_j)*O_ji
+
+   i        Re[S1_i]        Im[S1_i]
+--------------------------------------------
+   1     -0.23017650E-16 -0.10000000E+01
+   2      0.10000000E+01  0.23017650E-16
+
+Difference DS_i = S_i - S1_i:
+
+   i        Re[DS_i]        Im[DS_i]         |DS_i|^2
+--------------------------------------------------------
+   1      0.64892365E-16 -0.22204460E-15  0.53514826E-31
+   2     -0.22204460E-15 -0.20689592E-16  0.49731866E-31
+
+Total difference:
+
+  sqrt(sum_i |DS_i|^2) =  0.32132023E-15
+
+********************************************
+
+--------------------------------------------
+Norm before normalization:  0.14142136E+01
+Norm after normalization:   0.10000000E+01
+--------------------------------------------
+
+***** PROPERTIES OF THE NEW RESTART WF *****
+
+ dgldim =        258
+ adim =            2
+
+ Number of SPF:
+
+    State(s)   Mode(m)   dim(m,s)
+--------------------------------------------
+       1          1          2
+
+********************************************
+
+Program terminated normally

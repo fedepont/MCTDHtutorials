@@ -1,0 +1,13 @@
+ Subroutine           Calls N         cpu/N             cpu       %cpu      real/N          real  cpu/real
+
+ Startup                    1         0.160           0.1600      69.6
+ initWF                     1         0.110           0.1100      47.8
+ genDVR                     1         0.030           0.0300      13.0
+ genOPER                    1         0.020           0.0200       8.7
+
+Total (usr,sys,cpu)       0.14     0.09       0.23   (  0h :  0m :  0.23s)
+
+ ---------------------------------------------------------------------------
+ ------ Host: "peperina" ----------Tue May  9 15:01:36 2023
+
+ /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/state0

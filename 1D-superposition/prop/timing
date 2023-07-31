@@ -1,0 +1,16 @@
+ Subroutine           Calls N         cpu/N             cpu       %cpu      real/N          real  cpu/real
+
+ ABM                      100         0.002           0.1700      60.7
+ Funk                    4478         0.000           0.1600      57.1
+ Startup                    1         0.050           0.0500      17.9
+ genDVR                     1         0.030           0.0300      10.7
+ Output                   101         0.000           0.0100       3.6
+ genOPER                    1         0.010           0.0100       3.6
+ initWF                     1         0.010           0.0100       3.6
+
+Total (usr,sys,cpu)       0.22     0.06       0.28   (  0h :  0m :  0.28s)
+
+ ---------------------------------------------------------------------------
+ ------ Host: "federico-X510UQR" ----------Fri Jul 21 13:16:55 2023
+
+ /home/federico/Dropbox/trabajo/estudiantes/javierduarte/sum_restart_files/prop
