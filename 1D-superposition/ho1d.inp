@@ -1,0 +1,41 @@
+########################################################################
+#               Diagonalisation of 1D harmonic oscillator              #
+#            Exact energies are E_n = 2*(n+1/2), n=0,1,2,...           #
+########################################################################
+
+RUN-SECTION
+  name = prop
+  #diagonalisation = 100
+  #time-not-fs
+  #geninwf
+  propagation
+  #energy-not-ev
+  lanczvec  eigvec
+  tfinal=0.1 tpsi = 0.001 tout=0.001
+  gridpop
+  auto
+end-run-section
+
+OPERATOR-SECTION
+  opname = ho1d
+end-operator-section
+
+SBASIS-SECTION
+  x = 1
+end-sbasis-section
+
+PBASIS-SECTION
+  x   HO   128   xi-xf   -10.0d0   +10.0d0
+end-pbasis-section
+
+
+
+INIT_WF-SECTION
+  #build
+  #  #x   HO   0.0d0   10.0d0   5.0d0,au
+  #  x eigenf ho pop=2
+  #end-build
+  file = suma_iniciales
+end-init_wf-section
+
+end-input

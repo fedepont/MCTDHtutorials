@@ -1,0 +1,33 @@
+
+*******************************************************************************
+                               MCTDH version  8
+                                  Release     6
+                                  Revision    3
+*******************************************************************************
+
+ ------ Host: "peperina" ----------Tue May  9 14:51:53 2023
+             
+ /home/pont/Dropbox/trabajo/estudiantes/javierduarte/state0
+------------------------------------------------------------------------------
+
+#    Order      CPU-time[s]        Delta-CPU         Real time
+#        2              0.2                          May  9 14:51:53 
+         4              0.2            0.000         May  9 14:51:53 
+         8              0.2            0.000         May  9 14:51:53 
+        16              0.2            0.000         May  9 14:51:53 
+        32              0.2            0.000         May  9 14:51:53 
+        60              0.2            0.000         May  9 14:51:53 
+       100              0.2            0.000         May  9 14:51:53 
+Number of Lanczos iterations:     100
+Number of eigenvalues found:        4
+Length of Lanczos vectors:        128
+
+Diagonalisation was successful.
+
+Total time     [h:m:s] :    0 :  0 :  0.17
+Wall  time     [h:m:s] :    0 :  0 :  0
+
+ ---------------------------------------------------------------------------
+ ------ Host: "peperina" ----------Tue May  9 14:51:53 2023
+
+ /home/pont/Dropbox/trabajo/estudiantes/javierduarte/state0

@@ -1,0 +1,258 @@
+
+------ Host: "peperina" ----------Tue May  9 15:01:49 2023
+
+ /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/state1
+
+ PID =410676
+
+--------------------------------------------------------------------------------
+****** Source code version ******
+
+Program Version :     8
+Release         :     6
+Revision        :     3
+
+Heidelberg SVN repository no.: 1427
+Checkin date: Fri, 13 Jan 2023, 16:12:38
+Compiled: Mon, 08 May 2023, 09:11:35 ; Host: peperina
+Program name: mctdh86
+
+Included surfaces: lsth veff2dsw
+
+Default operator-path: /home/pont/programas/mctdh86.3/operators
+ ###  time-not-fs   is set!  ###
+ ###  energy-not-ev is set!  ###
+--------------------------------------------------------------------------------
+
+###############                 NEW RUN                  ###############
+
+******* OPTIONS ******
+-w
+
+
+########################################################################
+
+ Reading Input Files
+
+########################################################################
+
+Task: gendvr genoper geninwf
+
+Opening operator file :/home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/ho1d.op
+
+***** Hamiltonian and title *****
+
+1D harmonic oscillator potential
+
+Parameter values taken from .op file
+
+Assigning Operators From Library
+
+
+***** Paths and input files *****
+
+~.inp  file copied to input in name directory
+name      : /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/state1
+input     : /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/ho1d.inp
+DVR file  : /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/state1
+.op file  : /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/ho1d.op
+INWF file : /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/state1
+cross-ref : /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/state1/restart
+
+overwrite enabled
+
+
+Timing file opened
+
+########################################################################
+
+ Creating DVR file: /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/state1/dvr
+                                                         May  9 15:01:49
+########################################################################
+
+***** Memory used in DVR basis generation *****
+
+Memory size (used / allocated) (in Mb):      1.360 /      3.954
+
+** Array dimensions **
+
+length of complex      array (used):           6          0.000 MB
+length of real         array (used):       65669          0.501 MB
+length of integer      array (used):           5          0.000 MB
+length of logical      array (used):           2          0.000 MB
+
+total array memory in mb     (used):         0.5
+
+
+
+****** Primitive Basis *********
+
+ mode     kappa    DVR    N        xi         xf         dx       p-max
+
+ x            1    HO   128    -10.000     10.000   0.157480     23.384   2.3384
+
+
+********* SPF Basis ************
+
+ mode        N    n      dof's
+
+    1      128    1       1
+
+ Total grid size       :      128     1.280E+02
+ Length of A-vector    :        1     1.000E+00
+ Length of Phi-vectors :      128     1.280E+02
+ Length of WF-vector   :      129     1.290E+02
+
+
+########################################################################
+
+ Creating OPER file: /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/state1/oper
+                                                         May  9 15:01:49
+########################################################################
+
+***** Memory used in OPERATOR generation *****
+
+Memory size (used / allocated) (in Mb):      2.369 /      4.963
+
+** Array dimensions **
+
+length of complex      array (used):       66049          1.008 MB
+length of real         array (used):       65795          0.502 MB
+length of integer      array (used):           4          0.000 MB
+length of logical      array (used):           2          0.000 MB
+
+total array memory in mb     (used):         1.5
+
+ *** RUNOPER include-array dimensions ***
+k   :  minkoe, maxkoe       6    4000
+h   :  htmdim, maxhtm       8    4000
+hl  :  hopdim, maxhop      10    4000
+nh  :  minfac, maxfac       4     200
+np  : npesopt, maxpes       0     100
+muld: mulddim,maxmuld       0      10
+n   :    ndef, maxdef       0     240
+n   :    npar, maxpar       3     300
+n   :    nrdf, maxrdf       0      16
+minnhtmshift,maxnhtmshift       0      10
+** Preliminary! See op.log file for final values.
+
+***** Operator details *****
+
+DOF no.    label
+    1       x
+
+Mode     DOFs
+   1    1=       x
+
+ feb =  0,  meb =  0,   fpb =  0,  mpb =  0,  mkoe =  2
+ leb = F,  lmult = F,  lmulpack = F,  lcap = F
+
+Number of Hamiltonians defined:     2
+    1     system                usediag
+    2     ho                    usediag
+
+########################################################################
+
+Creating RESTART file
+                                                         May  9 15:01:49
+########################################################################
+
+
+****** Initial SPF Functions *********
+  1  x         eigenf  pop =  2  sym =  0      ham =   2  ho
+
+***** Length of psi vector *****
+
+Overall length of A-vector      :        1    1.000E+00
+Length of phi vector for mode   1:      128
+                                  --------
+Length of wavefunction vector   :      129    1.290E+02
+
+workcdim   :     32768   3.277E+04
+workrdim   :     32896   3.290E+04
+workidim   :       128
+
+***** Memory used in WAVEFUNCTION generation *****
+
+Memory size (used / allocated) (in Mb):      1.880 /      4.474
+
+** Array dimensions **
+
+length of psi/dtpsi    array (used):         129          0.002 MB
+length of complex      array (used):       33678          0.514 MB
+length of real         array (used):       65803          0.502 MB
+length of integer      array (used):         133          0.001 MB
+length of logical      array (used):           3          0.000 MB
+
+total array memory in mb     (used):         1.0
+
+**** Reading OPER file ****
+1D harmonic oscillator potential
+Created on:
+------ Host: "peperina" ----------Tue May  9 15:01:49 2023
+
+
+*** VEIGEN ***  operator: h =    6 ho , DOF = x        state =  1, type =  8
+
+   1. Eigenvalue     1.000000000[eV]    1.000000000000[au] ,   2. spf
+   2. Eigenvalue     3.000000000[eV]    3.000000000000[au] ,   1. spf
+   3. Eigenvalue     5.000000000[eV]    5.000000000000[au]
+   4. Eigenvalue     7.000000000[eV]    7.000000000000[au]
+   5. Eigenvalue     9.000000000[eV]    9.000000000000[au]
+   6. Eigenvalue    11.000000000[eV]   11.000000000000[au]
+   7. Eigenvalue    13.000000000[eV]   13.000000000000[au]
+   8. Eigenvalue    15.000000000[eV]   15.000000000000[au]
+   9. Eigenvalue    17.000000000[eV]   17.000000000000[au]
+  10. Eigenvalue    19.000000000[eV]   19.000000000000[au]
+  11. Eigenvalue    21.000000000[eV]   21.000000000000[au]
+  12. Eigenvalue    23.000000000[eV]   23.000000000000[au]
+  13. Eigenvalue    25.000000000[eV]   25.000000000000[au]
+  14. Eigenvalue    27.000000000[eV]   27.000000000000[au]
+  15. Eigenvalue    29.000000000[eV]   29.000000000000[au]
+  16. Eigenvalue    31.000000000[eV]   31.000000000000[au]
+  17. Eigenvalue    33.000000000[eV]   33.000000000000[au]
+  18. Eigenvalue    35.000000000[eV]   35.000000000000[au]
+  19. Eigenvalue    37.000000000[eV]   37.000000000000[au]
+  20. Eigenvalue    39.000000000[eV]   39.000000000000[au]
+  21. Eigenvalue    41.000000000[eV]   41.000000000000[au]
+  22. Eigenvalue    43.000000000[eV]   43.000000000000[au]
+  23. Eigenvalue    45.000000000[eV]   45.000000000000[au]
+  24. Eigenvalue    47.000000000[eV]   47.000000000000[au]
+  25. Eigenvalue    49.000000000[eV]   49.000000000000[au]
+  26. Eigenvalue    51.000000000[eV]   51.000000000000[au]
+  27. Eigenvalue    53.000000000[eV]   53.000000000000[au]
+  28. Eigenvalue    55.000000000[eV]   55.000000000000[au]
+  29. Eigenvalue    57.000000000[eV]   57.000000000000[au]
+  30. Eigenvalue    59.000000000[eV]   59.000000000000[au]
+  31. Eigenvalue    61.000000000[eV]   61.000000000000[au]
+  32. Eigenvalue    63.000000000[eV]   63.000000000000[au]
+  33. Eigenvalue    65.000000000[eV]   65.000000000000[au]
+  34. Eigenvalue    67.000000000[eV]   67.000000000000[au]
+  35. Eigenvalue    69.000000000[eV]   69.000000000000[au]
+  36. Eigenvalue    71.000000000[eV]   71.000000000000[au]
+  37. Eigenvalue    73.000000000[eV]   73.000000000000[au]
+  38. Eigenvalue    75.000000000[eV]   75.000000000000[au]
+  39. Eigenvalue    77.000000000[eV]   77.000000000000[au]
+  40. Eigenvalue    79.000000000[eV]   79.000000000000[au]
+  41. Eigenvalue    81.000000000[eV]   81.000000000000[au]
+  42. Eigenvalue    83.000000000[eV]   83.000000000000[au]
+  43. Eigenvalue    85.000000000[eV]   85.000000000000[au]
+  44. Eigenvalue    87.000000000[eV]   87.000000000000[au]
+
+
+*** PARAMETER ***
+ veigen : minedim,    maxedim       2      50
+ timing : nsub,       maxsub       37     100
+ eingabe: nreadspf,maxreadspf       0      10
+
+Program terminated normally.  (geninwf run)
+
+***** Overall Timing *****
+
+Total cpu time     [s] :          0.07
+Total system time  [s] :          0.05
+Total time     [h:m:s] :    0 :  0 :  0.12
+Wall  time     [h:m:s] :    0 :  0 :  0
+
+------ Host: "peperina" ----------Tue May  9 15:01:49 2023
+

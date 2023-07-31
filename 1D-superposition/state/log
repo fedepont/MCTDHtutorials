@@ -1,0 +1,225 @@
+
+------ Host: "peperina" ----------Tue May  9 15:22:37 2023
+
+ /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/state
+
+ PID =412560
+
+--------------------------------------------------------------------------------
+****** Source code version ******
+
+Program Version :     8
+Release         :     6
+Revision        :     3
+
+Heidelberg SVN repository no.: 1427
+Checkin date: Fri, 13 Jan 2023, 16:12:38
+Compiled: Mon, 08 May 2023, 09:11:35 ; Host: peperina
+Program name: mctdh86
+
+Included surfaces: lsth veff2dsw
+
+Default operator-path: /home/pont/programas/mctdh86.3/operators
+ ###  time-not-fs   is set!  ###
+ ###  energy-not-ev is set!  ###
+--------------------------------------------------------------------------------
+
+###############                 NEW RUN                  ###############
+
+******* OPTIONS ******
+-mnd
+
+
+########################################################################
+
+ Reading Input Files
+
+########################################################################
+
+Task: gendvr genoper geninwf
+
+Opening operator file :/home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/ho1d.op
+
+***** Hamiltonian and title *****
+
+1D harmonic oscillator potential
+
+Parameter values taken from .op file
+
+Assigning Operators From Library
+
+
+***** Paths and input files *****
+
+~.inp  file copied to input in name directory
+name      : /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/state
+input     : /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/ho1d.inp
+DVR file  : /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/state
+.op file  : /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/ho1d.op
+INWF file : /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/suma_iniciales
+cross-ref : /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/state/restart
+
+overwrite disabled
+
+
+Timing file opened
+
+########################################################################
+
+ Creating DVR file: /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/state/dvr
+                                                         May  9 15:22:37
+########################################################################
+
+***** Memory used in DVR basis generation *****
+
+Memory size (used / allocated) (in Mb):      1.360 /      3.954
+
+** Array dimensions **
+
+length of complex      array (used):           6          0.000 MB
+length of real         array (used):       65669          0.501 MB
+length of integer      array (used):           5          0.000 MB
+length of logical      array (used):           2          0.000 MB
+
+total array memory in mb     (used):         0.5
+
+
+
+****** Primitive Basis *********
+
+ mode     kappa    DVR    N        xi         xf         dx       p-max
+
+ x            1    HO   128    -10.000     10.000   0.157480     23.384   2.3384
+
+
+********* SPF Basis ************
+
+ mode        N    n      dof's
+
+    1      128    1       1
+
+ Total grid size       :      128     1.280E+02
+ Length of A-vector    :        1     1.000E+00
+ Length of Phi-vectors :      128     1.280E+02
+ Length of WF-vector   :      129     1.290E+02
+
+
+########################################################################
+
+ Creating OPER file: /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/state/oper
+                                                         May  9 15:22:37
+########################################################################
+
+***** Memory used in OPERATOR generation *****
+
+Memory size (used / allocated) (in Mb):      2.369 /      4.963
+
+** Array dimensions **
+
+length of complex      array (used):       66049          1.008 MB
+length of real         array (used):       65795          0.502 MB
+length of integer      array (used):           4          0.000 MB
+length of logical      array (used):           2          0.000 MB
+
+total array memory in mb     (used):         1.5
+
+ *** RUNOPER include-array dimensions ***
+k   :  minkoe, maxkoe       6    4000
+h   :  htmdim, maxhtm       8    4000
+hl  :  hopdim, maxhop      10    4000
+nh  :  minfac, maxfac       4     200
+np  : npesopt, maxpes       0     100
+muld: mulddim,maxmuld       0      10
+n   :    ndef, maxdef       0     240
+n   :    npar, maxpar       3     300
+n   :    nrdf, maxrdf       0      16
+minnhtmshift,maxnhtmshift       0      10
+** Preliminary! See op.log file for final values.
+
+***** Operator details *****
+
+DOF no.    label
+    1       x
+
+Mode     DOFs
+   1    1=       x
+
+ feb =  0,  meb =  0,   fpb =  0,  mpb =  0,  mkoe =  2
+ leb = F,  lmult = F,  lmulpack = F,  lcap = F
+
+Number of Hamiltonians defined:     2
+    1     system                usediag
+    2     ho                     nodiag
+
+########################################################################
+
+Creating RESTART file
+                                                         May  9 15:22:37
+########################################################################
+
+**** RSTINFO: Reading RESTART file ****
+Type : wavefunction, file-version =  8.50060
+Created on:
+------ Host: "peperina" ----------Tue May  9 15:20:32 2023
+
+
+***** Length of psi vector *****
+
+Overall length of A-vector      :        1    1.000E+00
+Length of phi vector for mode   1:      128
+                                  --------
+Length of wavefunction vector   :      129    1.290E+02
+
+workcdim   :       774   7.740E+02
+workrdim   :       128   1.280E+02
+workidim   :         1
+
+***** Memory used in WAVEFUNCTION generation *****
+
+Memory size (used / allocated) (in Mb):      1.139 /      3.733
+
+** Array dimensions **
+
+length of psi/dtpsi    array (used):         129          0.002 MB
+length of complex      array (used):        1565          0.024 MB
+length of real         array (used):       33041          0.252 MB
+length of integer      array (used):           6          0.000 MB
+length of logical      array (used):           3          0.000 MB
+
+total array memory in mb     (used):         0.3
+
+**** Reading OPER file ****
+1D harmonic oscillator potential
+Created on:
+------ Host: "peperina" ----------Tue May  9 15:22:37 2023
+
+
+***** Restart calculation (file=) *****
+
+Restart file read from :  /home/pont/Dropbox/trabajo/estudiantes/javierduarte/suma_restart_filas/suma_iniciales/restart
+The initial wavefunction is Schmidt-orthogonalized.
+
+**** RSTINFO: Reading RESTART file ****
+Type : wavefunction, file-version =  8.50060
+Created on:
+------ Host: "peperina" ----------Tue May  9 15:20:32 2023
+
+Old norm (before adapting SPFs):    1.000000000,    squared:   1.000000000
+new norm (before normalisation):    1.000000000,    squared:   1.000000000
+
+*** PARAMETER ***
+ veigen : minedim,    maxedim       0      50
+ timing : nsub,       maxsub       37     100
+ eingabe: nreadspf,maxreadspf       0      10
+
+Program terminated normally.  (geninwf run)
+
+***** Overall Timing *****
+
+Total cpu time     [s] :          0.06
+Total system time  [s] :          0.06
+Total time     [h:m:s] :    0 :  0 :  0.12
+Wall  time     [h:m:s] :    0 :  0 :  0
+
+------ Host: "peperina" ----------Tue May  9 15:22:37 2023
+

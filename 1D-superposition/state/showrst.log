@@ -1,0 +1,26 @@
+
+**** RSTINFO: Reading RESTART file ****
+Type : wavefunction, file-version =  8.60030
+Created on:
+------ Host: "peperina" ----------Tue May  9 15:22:37 2023
+
+
+--------------------------------------------------------------------------------
+****** Source code version ******
+
+Program Version :     8
+Release         :     6
+Revision        :     3
+
+Heidelberg SVN repository no.: 1427
+Checkin date: Fri, 13 Jan 2023, 16:12:38
+Compiled: Tue, 09 May 2023, 15:02:28 ; Host: peperina
+Program name: showrst86
+--------------------------------------------------------------------------------
+
+  *** Memory allocated dynamically ***
+ complex*16 :         522
+ real*8     :      147586
+ Total   :        1189184. Bytes ,       1.13 MB
+--------------------------------------------------------------------------------
+

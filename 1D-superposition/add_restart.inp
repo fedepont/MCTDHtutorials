@@ -1,0 +1,13 @@
+RUN-SECTION
+  name      = suma_iniciales
+  normalize 
+end-run-section
+
+INIT_WF-SECTION
+ file  = state0
+ coeff = 0.0,1.0
+ file  = state1
+ coeff = 1.0
+end-init_wf-section
+
+end-input
