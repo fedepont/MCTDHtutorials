@@ -1,0 +1,917 @@
+Included surfaces (-i option):  lsth Cc3vcoul Nc3vcoul
+--------------------------------------------------------------------------------
+  compile  all                      Mon, 20 Feb 2017, 15:48:01
+--------------------------------------------------------------------------------
+Platform:             x86_64
+Compiler environment: gfortran
+Operating system:     Linux
+Fortran compiler:     gfortran   
+C compiler:           gcc
+Make command:         make -k
+Program name:         all   (compile and link all MCTDH programs)
+ 
+Program path:         /home/pont/programas/mctdh84.8.1/bin/binary/x86_64
+Object path:          /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran
+ 
+Only altered files will be compiled.
+Starting compilation with optimization.
+ 
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -c /home/pont/programas/mctdh84.8.1/source/mctdh/wrversion.F
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -c -o Cc3vcoul.o /home/pont/programas/mctdh84.8.1/source/surfaces/Cc3vcoul.f
+ar rlc /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfaces84.a lsth.o Cc3vcoul.o Nc3vcoul.o
+ar rlc ./surfaces.a lsth.o Cc3vcoul.o Nc3vcoul.o
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o mctdh \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.o   \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/gendvr84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a    \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	./surfaces.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a        \
+	-lpthread -lrt     \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/numadef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o potfit \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/potfit84.o  \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/potfit84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/gendvr84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	./surfaces.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a        \
+	-lpthread -lrt     \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o projection \
+	 /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/projection84.o  \
+	 wrversion.o \
+	 /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/potfit84.a  \
+	 /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	 /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/gendvr84.a  \
+	 /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	 /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	 ./surfaces.a \
+	 /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	 /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	 /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	 /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a        \
+	 -lpthread -lrt     \
+	 /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o filter \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/filter84.o  \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/filter84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a        \
+	-lpthread -lrt     \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o fdc \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/fdc84.o  \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/fdc84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a     \
+	-lpthread -lrt  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o vctrans  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/vctrans84.o  \
+	wrversion.o   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/vcham84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a        \
+	-lpthread -lrt     \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o vchfit  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/vchfit84.o  \
+	wrversion.o   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/vcham84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a        \
+	-lpthread -lrt     \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o vcpnt  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/vcpnt84.o  \
+	wrversion.o   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/vcham84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a        \
+	-lpthread -lrt     \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o vcplot  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/vcplot84.o  \
+	wrversion.o   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/vcham84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a        \
+	-lpthread -lrt     \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o adpop \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/adpop84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/gendvr84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o adproj \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/adproj84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/potfit84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/gendvr84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o analysis \
+	     /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analysis84.o \
+	     wrversion.o   \
+	     /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a  \
+	     /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a    \
+	     /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a   \
+	     -lpthread -lrt    \
+	     /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o aoverlap \
+	     /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/aoverlap84.o \
+	     wrversion.o \
+	     /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a  \
+	     /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a    \
+	     /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a  \
+	     /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a   \
+	     -lpthread -lrt    \
+	     /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o autospec \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/autospec84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a    \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a   \
+	-lpthread -lrt     \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o chnpot \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/chnpot84.o  \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/potfit84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/gendvr84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a        \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o compare \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/compare84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o convpsi \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/convpsi84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o crosscorr \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/crosscorr84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/numadef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o crosspec \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/crosspec84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a    \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a   \
+	-lpthread -lrt    \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o di2ad \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/di2ad84.o    \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a    \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a   \
+	-lpthread -lrt    \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o diag \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/diag84.o    \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o expect \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/expect84.o  \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/numadef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o fdcheck \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/fdcheck84.o \
+	-lpthread -lrt
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o fdmatch \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/fdmatch84.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	-lpthread -lrt
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o flux \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/flux84.o    \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	./surfaces.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/numadef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o fmat \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/fmat84.o    \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/numadef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o jinpol \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/jinpol84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o joinpsi \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/joinpsi84.o  \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/numadef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o maxpe \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/maxpe84.o   \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o norm \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/norm84.o    \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt    \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o ortho \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/ortho84.o   \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o overlap \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/overlap84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o pexpect \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/pexpect84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/numadef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o prhosub \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/prhosub84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o probsq \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/probsq84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a   \
+	-lpthread -lrt    \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o psi2ex \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/psi2ex84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o psi2rst \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/psi2rst84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o rdauto \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/rdauto84.o  \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o rdautoe \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/rdautoe84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o rdcheck \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/rdcheck84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o rdeigval \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/rdeigval84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o rdgrid \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/rdgrid84.o  \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o rdgpop \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/rdgpop84.o  \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o rdsteps \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/rdsteps84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o rdupdate \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/rdupdate84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a    \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a   \
+	-lpthread -lrt    \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o reflex \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/reflex84.o  \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o showd1d \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/showd1d84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o showpot \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/showpot84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/potfit84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/gendvr84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o showrst \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/showrst84.o  \
+	wrversion.o  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a    \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a   \
+	-lpthread -lrt    \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o showspf \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/showspf84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o showsys \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/showsys84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/gendvr84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o statepop \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/statepop84.o  \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o sumspec \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/sumspec84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o twprob \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/twprob84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a    \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a    \
+	-lpthread -lrt     \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o vminmax \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/vminmax84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/gendvr84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o dengen \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/dengen84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/gendvr84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gcc -O2 -pthread -m64 -DPARALLEL -DF2C_STYLE=0 -DPTHREAD_STYLE=0 -o mmemtest /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mmemtest84.o
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o rdacoeff \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/rdacoeff84.o  \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/numadef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o wfproj \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/wfproj84.o    \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/numadef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o sumrst \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/sumrst84.o  \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a \
+	-lpthread -lrt \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/numadef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o edengen \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/edengen84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/gendvr84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o twopdens \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/twopdens84.o  \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	-lpthread -lrt   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/numadef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o npotminmax \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/npotminmax84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/potfit84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/gendvr84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/gendvr84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a        \
+	-lpthread -lrt     \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o genfld \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genfld84.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/oct84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	./surfaces.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a \
+	-lpthread -lrt \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o xfrog \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/xfrog84.o  \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a  \
+	-lpthread -lrt \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o efield \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/efield84.o \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/oct84.a     \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/geninwf84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/propwf84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a   \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/oct84.a     \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a  \
+	-lpthread -lrt \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/numadef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o fldop \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/fldop84.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/oct84.a  \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/genoper84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/opfuncs84.a \
+	./surfaces.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/surfdef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a \
+	-lpthread -lrt \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+gfortran -O2 -fconvert=little-endian -frecord-marker=4 -funroll-loops  -m64 -msse2 -mfpmath=sse -DPARALLEL -I/home/pont/programas/mctdh84.8.1/CompDir19550 -I/home/pont/programas/mctdh84.8.1/source/include -o jfunc \
+	wrversion.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/jfunc84.o \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/mctdh84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/analyse84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libla84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/liblapack84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libblas84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libode84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libnum84.a /home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/libsys84.a \
+	-lpthread -lrt \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/threaddef84.a \
+	/home/pont/programas/mctdh84.8.1/object/x86_64/gfortran/librtdef84.a
+ 
+ 
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/mctdh84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/potfit84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/projection84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/filter84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/fdc84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/adpop84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/adproj84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/analysis84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/aoverlap84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/autospec84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/chnpot84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/compare84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/convpsi84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/crosscorr84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/crosspec84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/dengen84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/di2ad84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/diag84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/edengen84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/expect84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/fdcheck84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/fdmatch84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/flux84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/fmat84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/jinpol84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/joinpsi84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/maxpe84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/mmemtest84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/norm84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/npotminmax84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/ortho84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/overlap84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/pexpect84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/prhosub84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/probsq84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/psi2ex84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/psi2rst84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/rdacoeff84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/rdauto84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/rdautoe84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/rdcheck84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/rdeigval84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/rdgpop84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/rdgrid84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/rdsteps84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/rdupdate84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/reflex84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/showd1d84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/showpot84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/showrst84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/showspf84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/showsys84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/statepop84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/sumrst84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/sumspec84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/twopdens84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/twprob84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/vminmax84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/wfproj84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/vchfit84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/vcplot84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/vcpnt84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/vctrans84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/efield84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/fldop84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/genfld84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/jfunc84 created.
+Executable /home/pont/programas/mctdh84.8.1/bin/binary/x86_64/xfrog84 created.
+ 
+Congratulations, the compilation was successful.
+ 68 executables are created.
+ 
+------  compile  ---  Mon, 20 Feb 2017, 15:48:08 ---  good bye!  ---------------
+--------------------------------------------------------------------------------
+ 
+
