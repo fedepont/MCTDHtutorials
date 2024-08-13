@@ -1,4 +1,6 @@
 
+# Symmetrization of electrons after a _partial_ relaxation that includes one electron #
+
 There is a set of script build to run the simulation for a collission between an electron and a molecule with one electron bound. 
 
 The molecule is described by
@@ -9,9 +11,9 @@ The trick is to get a totally symmetrized or anti symmetrized state in the elect
 
 The are 4 steps
 
-**01_run_vlgrid_alpha.sh**
+## 01_run_vlgrid_alpha.sh ##
 
-In this step we compute the relaxed state for the molecule.
+**Description:** In this step we compute the relaxed state for the molecule.
 
 It uses the files:
 
@@ -83,12 +85,11 @@ What we can see here is that the only populated SPF for `X1` (corresponding to `
 For `X2`(`j2`) and `R`(`j3`) the relaxation has correlated the SPFs and there is several contributions.
 
     
-**02_run_vlgrid_alpha.sh**
+## 02_run_vlgrid_alpha.sh ##
+
+**Description:** In this step we give electron x1 wave function the shape of a Gaussian.
 
 Uses the output from 1.
-
-In this step we give electron x1 wave function the shape of a Gaussian.
-
 It uses the files:
 
 * NeHeplus_inwf_punched.inp
@@ -126,7 +127,7 @@ modes    |  X1
 end-hamiltonian-section
 ~~~
 
-were the `punch` and `projg` are defined in the `LABELS-SECTION`
+were the `punch` and `projg` are defined in the `LABELS-SECTION`,
 
 ~~~
 LABELS-SECTION
@@ -143,16 +144,28 @@ end-labels-section
 
 As we see in the definition of the [MCTDH guide](https://www.pci.uni-heidelberg.de/tc/usr/mctdh/doc/guide/guide.pdf) table C.3,  they are projection onto a Gaussian and multiplication by an exponential. The gaussian projection provides the shape and the complex exponential the "punch" that gives the initial impulse of the incoming electron. Note that the gaussian is centered at  `-172.0`, far away from the molecule CM.
 
+This step is a `geninwf` run that only produces a new `restart` file. At this stage, the `A-coeff` is the same as in the previous step, we only modified the SPFs of the `X1` coordinate.
 
+## 03_run_vlgrid_alpha.sh ##
 
-
-
-**03_run_vlgrid_alpha.sh**
+**Description:** In this step we read the starting non-zero A coefficients for the relaxed state and build a properly symmetrized state using the Gaussian incoming state of  electron `X1`  and the contribution of the bound electron `X2`.
 
 Uses the output from 2.
 
-In this step we read the first non-zero A coefficients if the relaxed state and build a properly symmetrized state
-using the Gaussian incoming state and the contribution of the bound electron x2.
+It uses the files:
+
+* NeHeplus_inwf_symm.inp 
+* NeHeplus_relaxation.o
+* E1_vs_R501_N501.dat
+* rvlgrid_tofill_symm.sh
+* header
+* editor_wfcoeffs.py
+* AND all the links to the particles interactions.
+
+We need to (Anti)symmetrize the electrons in our problem since they are identical particles. Our technical problem here is that we have an expansion for the cation state,
+
+$$\psi(X2,R) = \sum $$
+
 
 **04_run_vlgrid_alpha.sh**
 
