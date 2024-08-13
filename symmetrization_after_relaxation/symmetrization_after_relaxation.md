@@ -14,17 +14,138 @@ The are 4 steps
 In this step we compute the relaxed state for the molecule.
 
 It uses the files:
-    -NeHeplus_inwf_relaxed.inp
-    -NeHeplus_relaxation.op
-    -E1_vs_R501_N501.dat
-    -rvlgrid_tofill_relaxed.sh
-    -AND all the links to the particles interactions.
+
+* NeHeplus_inwf_relaxed.inp
+* NeHeplus_relaxation.op
+* E1_vs_R501_N501.dat
+* rvlgrid_tofill_relaxed.sh
+* AND all the links to the particles interactions.
+
+From the SPF basis section in `NeHeplus_inwf_relaxed.inp` we see that there are no identical modes
+
+~~~
+SBASIS-SECTION
+  X1   = 20
+  X2   = 20
+  R     = 18
+  #R     = 14
+end-sbasis-section
+~~~
+
+In the `INIT_WF-SECTION` we can see that the initial state for the incoming electron `X1` is a "flat" state.
+
+~~~
+INIT_WF-SECTION
+build
+  X1 HO 0.0 0.0 0.0
+  X2 eigenf 1e2N pop=1
+  R eigenf ground_state pop=1
+end-build
+~~~
+
+Moreover if you see the Hamiltonian in `NeHeplus_relaxation.op`, you will notice there is no interaction whatsoever between `X1` and `X2` or `R`. Then, the relaxation occurs only for `X2` and `R` given a relaxed state for the NeHe+ cation.
+
+~~~
+HAMILTONIAN-SECTION
+-----------------------------------------------------
+modes    |  X1  |  X2  | R 
+-----------------------------------------------------
+1.0      |  1   |  KE  |  1
+1.0      |  1   |  1   |  KE
+1.0      |  1   |  1   | VNN*VNNgauss
+-1.0    |2&3 VNeA
+-1.0    |2&3 VNeB
+----------------------------------------------------
+end-hamiltonian-section
+~~~
+
+After the relaxation, we can obtain the A-coefficients of the multiconfigurational wave function using `rdacoeff86` analysis rutine. The routine will give the A coeffs for each relaxation time. The last one is the one that is useful for us. This is an example of the output (`E=0.600 au`),
+
+~~~
+------- Time =    1.0000 fs -------         ( cmplx)
+
+        J            A                   j1 j2 j3 j4 j5 ...
+  -------------------------------------------------------------------------
+        1  (-0.998869598, 0.000000000)    1  1  1
+      421  ( 0.047385849, 0.000000000)    1  2  2
+      841  (-0.003740164, 0.000000000)    1  3  3
+     1261  (-0.000378915, 0.000000000)    1  4  4
+     1681  (-0.000044665, 0.000000000)    1  5  5
+     2101  ( 0.000011464, 0.000000000)    1  6  6
+     2521  ( 0.000000012, 0.000000000)    1  7  7
+
+ Number of A-coeffs with absolute values between 1.00E-08 1.00E+08 :       7
+ Norm of these A-coeffs (sqrt[sum|A|^2]):  1.00000001,  norm^2 =  1.00000003
+----------------------------------------------------------------------------
+~~~
+
+What we can see here is that the only populated SPF for `X1` (corresponding to `j1`in the table) is the number 1.
+For `X2`(`j2`) and `R`(`j3`) the relaxation has correlated the SPFs and there is several contributions.
+
     
 **02_run_vlgrid_alpha.sh**
 
 Uses the output from 1.
 
 In this step we give electron x1 wave function the shape of a Gaussian.
+
+It uses the files:
+
+* NeHeplus_inwf_punched.inp
+* NeHeplus_relaxation.op
+* E1_vs_R501_N501.dat
+* rvlgrid_tofill_punched.sh
+* AND all the links to the particles interactions.
+
+The input file for this step `NeHeplus_inwf_punched.inp` reads the output from the relaxation and operates with two projection operators,
+
+~~~
+INIT_WF-SECTION
+file= inwf_relaxed
+operate=ProjX1,punchX1
+end-init_wf-section
+~~~
+
+If we check in the operator file `NeHeplus_relaxation.op` we can see the definition of this projections as extra `HAMILTONIAN-SECTION`,
+
+~~~
+HAMILTONIAN-SECTION_punchX1
+-----------------------------------------------------
+modes    |  X1
+-----------------------------------------------------
+1.0      |  punch
+----------------------------------------------------
+end-hamiltonian-section
+
+HAMILTONIAN-SECTION_ProjX1
+-----------------------------------------------------
+modes    |  X1
+-----------------------------------------------------
+1.0      |  projg
+----------------------------------------------------
+end-hamiltonian-section
+~~~
+
+were the `punch` and `projg` are defined in the `LABELS-SECTION`
+
+~~~
+LABELS-SECTION
+.
+..
+...
+punch=Exp[PPP,0]
+projg=pgauss[DXX,-172.0]
+...
+..
+.
+end-labels-section
+~~~
+
+As we see in the definition of the [MCTDH guide](https://www.pci.uni-heidelberg.de/tc/usr/mctdh/doc/guide/guide.pdf) table C.3,  they are projection onto a Gaussian and multiplication by an exponential. The gaussian projection provides the shape and the complex exponential the "punch" that gives the initial impulse of the incoming electron. Note that the gaussian is centered at  `-172.0`, far away from the molecule CM.
+
+
+
+
 
 **03_run_vlgrid_alpha.sh**
 
