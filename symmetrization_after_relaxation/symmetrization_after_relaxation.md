@@ -179,6 +179,9 @@ It uses the files:
 
 We need to (Anti)symmetrize the electrons in our problem since they are identical particles. Our technical problem here is that we have an expansion for the cation state,
 
+![image](https://github.com/user-attachments/assets/6813a300-9a04-443f-bd8e-d2c6e890955d)
+
+
 \[
 \psi(X_2,R) = \sum_{i,j} C_{i,j} \phi^{(mol)}_{i}(X_2) \chi_{j}(R) 
 \]
