@@ -179,27 +179,16 @@ It uses the files:
 
 We need to (Anti)symmetrize the electrons in our problem since they are identical particles. Our technical problem here is that we have an expansion for the cation state,
 
-![image](https://github.com/user-attachments/assets/6813a300-9a04-443f-bd8e-d2c6e890955d)
-
-
-\[
-\psi(X_2,R) = \sum_{i,j} C_{i,j} \phi^{(mol)}_{i}(X_2) \chi_{j}(R) 
-\]
-
+![unsymmetrized cation state](./unsymm.png)
 
 Then the complete state for the system is,
 
-\[
-\Psi(X_2,R) = \phi^{(gauss)}_{0}(X_1)\sum_{i,j} C_{i,j} \phi^{(mol)}_{i}(X_2) \chi_{j}(R)
-\]
+![complete unsymmetrized state](./complete_unsymm.png)
 
-\begin{eqnarray}
-\Psi_{unsymm}(X_2,R) &=& \phi^{(gauss)}_{0}(X_1) ( C_{0,0} \phi^{(mol)}_{0}(X_2) \chi_{0}(R) + C_{1,1} \phi^{(mol)}_{1}(X_2) \chi_{1}(R) \\
-&+& C_{3,3} \phi^{(mol)}_{2}(X_3) \chi_{3}(R) + C_{4,4} \phi^{(mol)}_{4}(X_2) \chi_{4}(R) )     
-\end{eqnarray}
+![complete unsymmetrized state expanded](complete_uns_expanded.png)
 
 \noindent Note that only "Diagonal`` terms ($C_{i,i}$) are shown in the expansion. This is a fact, after calculation, more than a simplification.
-If we want to symmetrize the wave function we need to perform two actions in MCTDH. First $X_1$ and $X_2$ should share SPFs basis since we want to use the identical keyword (id). Second, combine this new SPFs in the initial state so that the electrons are correctly symmetrized.
+If we want to symmetrize the wave function we need to perform two actions in MCTDH. _First_ $X_1$ and $X_2$ should share SPFs basis since we want to use the identical keyword (id). _Second_, combine this new SPFs in the initial state so that the electrons are correctly symmetrized.
 
 ***First step***
 
@@ -216,31 +205,58 @@ If you use the symorb=1,2 keyword you get,
 
 | SPFs (X1 and X2)    |
 | -------- |
-| n.1=g.1 | 
-| n.2=m.1 |
-| n.3=g.2 |
-| n.4=m.2 |
-| n.5=g.3 |
-| n.6=m.3 |
-| n.7=g.4 |
-| n.8=m.4 |
+| $\phi^{(n)}_{1}$=n.1=g.1 | 
+| $\phi^{(n)}_{2}$=n.2=m.1 |
+| $\phi^{(n)}_{3}$=n.3=g.2 |
+| $\phi^{(n)}_{4}$=n.4=m.2 |
+| $\phi^{(n)}_{5}$=n.5=g.3 |
+| $\phi^{(n)}_{6}$=n.6=m.3 |
+| $\phi^{(n)}_{7}$=n.7=g.4 |
+| $\phi^{(n)}_{8}$=n.8=m.4 |
+
+***Second step***
 
 And we want this new symmetrized state,
 
-\begin{eqnarray}
-\Psi_{symm}(X_2,R) &=&  C_{0,0} ( \phi^{(n)}_{0}(X_1) \phi^{(n)}_{1}(X_2) + \phi^{(n)}_{1}(X_1) \phi^{(n)}_{0}(X_2))  \chi_{1}(R) 
-&+& C_{1,1} ( \phi^{(n)}_{0}(X_1) \phi^{(n)}_{2}(X_2) + \phi^{(n)}_{2}(X_1) \phi^{(n)}_{0}(X_2) )  \chi_{1}(R) \\
-&+& C_{2,2} ( \phi^{(n)}_{0}(X_1) \phi^{(n)}_{3}(X_2) + \phi^{(n)}_{2}(X_1) \phi^{(n)}_{0}(X_2) )  \chi_{1}(R) 
-\end{eqnarray}
+![symmetrized state](symmetrized_state.png)
 
+Note that according to the numbers in the configurations, $C_{1,1}=A_{1,2,1}=A_{2,1,1}$ ; $C_{2,2}=A_{1,4,1}=A_{4,1,1}$ and
+$C_{3,3}=A_{1,6,1}=A_{6,1,1}$ which gives a clear set up for the `A-coeff` section we need to build.
 
+When runnning the script `03_run_vlgrid_alpha.sh`, the code will get the `A-coeff` from the state from step 2 and insert it into the input file `NeHeplus_inwf_symm.inp` to construct a properly symmetrized state. This is done using `rdacoeff86` analysis routine and the python script `editor_wfcoeffs.py` which uses pandas to handle the data. The result is this section,
+
+~~~
+A-coeff
+1 2 1 (-0.435514695,0.898925690)
+2 1 1 (-0.435514695,0.898925690)
+1 4 2 (0.020660589,-0.042644564)
+4 1 2 (0.020660589,-0.042644564)
+1 6 3 (-0.001630740,0.003365934)
+6 1 3 (-0.001630740,0.003365934)
+1 8 4 (-0.000165210,0.000341001)
+8 1 4 (-0.000165210,0.000341001)
+1 10 5 (-0.000019474,0.000040196)
+10 1 5 (-0.000019474,0.000040196)
+1 12 6 (0.000004999,-0.000010317)
+12 1 6 (0.000004999,-0.000010317)
+end-A-coeff
+~~~
 
 
 **04_run_vlgrid_alpha.sh**
 
 Uses the output from 3.
 
-This is just the propagation run.
+This is just the propagation run where the `id` keyword is given in the `SPFs` section,
+
+~~~
+SBASIS-SECTION
+  X1   = 20
+  X2   = id, 1
+  R     = 18
+  #R     = 14
+end-sbasis-section
+~~~
 
 
 
