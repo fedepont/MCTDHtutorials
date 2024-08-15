@@ -144,7 +144,22 @@ end-labels-section
 
 As we see in the definition of the [MCTDH guide](https://www.pci.uni-heidelberg.de/tc/usr/mctdh/doc/guide/guide.pdf) table C.3,  they are projection onto a Gaussian and multiplication by an exponential. The gaussian projection provides the shape and the complex exponential the "punch" that gives the initial impulse of the incoming electron. Note that the gaussian is centered at  `-172.0`, far away from the molecule CM.
 
-This step is a `geninwf` run that only produces a new `restart` file. At this stage, the `A-coeff` is the same as in the previous step, we only modified the SPFs of the `X1` coordinate.
+This step is a `geninwf` run that only produces a new `restart` file. At this stage, the `A-coeff` is the same (in absolute value!) as in the previous step, we only modified the SPFs of the `X1` coordinate.
+
+~~~
+      J            A                   j1 j2 j3 j4 j5 ...
+  -------------------------------------------------------------------------
+        1  (-0.435514695, 0.898925690)    1  1  1
+      421  ( 0.020660589,-0.042644564)    1  2  2
+      841  (-0.001630740, 0.003365934)    1  3  3
+     1261  (-0.000165210, 0.000341001)    1  4  4
+     1681  (-0.000019474, 0.000040196)    1  5  5
+     2101  ( 0.000004999,-0.000010317)    1  6  6
+     2521  (-0.000000005, 0.000000010)    1  7  7
+
+ Number of A-coeffs with absolute values between 1.00E-08 1.00E+08 :       7
+ Norm of these A-coeffs (sqrt[sum|A|^2]):  1.00000000,  norm^2 =  1.00000000
+~~~
 
 ## 03_run_vlgrid_alpha.sh ##
 
@@ -189,23 +204,23 @@ The SPFs for the output from 3  are
 
 | SPFs (gauss)    | SPFs (mol)|
 | -------- | ------- |
-| $\phi^{(gauss)}_{0}=g.0$  | $\phi^{(mol)}_{0}=m.0$    |
-| $\phi^{(gauss)}_{1}=g.1$ | $\phi^{(mol)}_{1}=m.1$    |
-| $\phi^{(gauss)}_{2}=g.2$   | $\phi^{(mol)}_{2}=m.2$  |
+| $\phi^{(gauss)}_{1}=g.1$  | $\phi^{(mol)}_{1}=m.1$    |
+| $\phi^{(gauss)}_{2}=g.2$ | $\phi^{(mol)}_{2}=m.2$    |
 | $\phi^{(gauss)}_{3}=g.3$   | $\phi^{(mol)}_{3}=m.3$  |
+| $\phi^{(gauss)}_{4}=g.4$   | $\phi^{(mol)}_{4}=m.4$  |
 
 If you use the symorb=1,2 keyword you get,
 
 | SPFs (X1 and X2)    |
 | -------- |
-| n.0=g.0 | 
-| n.1=m.0 |
-| n.2=g.1 |
-| n.3=m.1 |
-| n.4=g.2 |
-| n.5=m.2 |
-| n.6=g.3 |
-| n.7=m.3 |
+| n.1=g.1 | 
+| n.2=m.1 |
+| n.3=g.2 |
+| n.4=m.2 |
+| n.5=g.3 |
+| n.6=m.3 |
+| n.7=g.4 |
+| n.8=m.4 |
 
 And we want this new symmetrized state,
 
