@@ -164,7 +164,13 @@ It uses the files:
 
 We need to (Anti)symmetrize the electrons in our problem since they are identical particles. Our technical problem here is that we have an expansion for the cation state,
 
-$$\psi(X2,R) = \sum $$
+$$\psi(X_2,R) = \sum_{i,j} C_{i,j} \phi^{(mol)}_{i}(X_2) \chi_{j}(R) $$
+
+Then the complete state for the system is,
+
+$$\Psi(X_2,R) = \phi^{(gauss)}_{0}(X_1)\sum_{i,j} C_{i,j} \phi^{(mol)}_{i}(X_2) \chi_{j}(R) $$
+
+$$\Psi(X_2,R) = \phi^{(gauss)}_{0}(X_1) ( C_{1,1} \phi^{(mol)}_{1}(X_2) \chi_{1}(R) + C_{2,2} \phi^{(mol)}_{2}(X_2) \chi_{2}(R) + C_{3,3} \phi^{(mol)}_{2}(X_3) \chi_{3}(R) + C_{4,4} \phi^{(mol)}_{4}(X_2) \chi_{4}(R) ) $$
 
 
 **04_run_vlgrid_alpha.sh**
