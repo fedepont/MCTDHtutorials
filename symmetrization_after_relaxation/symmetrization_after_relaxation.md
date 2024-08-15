@@ -197,15 +197,15 @@ The SPFs for the output from 3  are
 If you use the symorb=1,2 keyword you get,
 
 | SPFs (X1 and X2)    |
-| -------- | ------- |
-| spf.0=g.0  
-| spf.1=m.0 
-| spf.2=g.1 
-| spf.3=m.1 
-| spf.4=g.2
-| spf.5=m.2
-| spf.6=g.3
-| spf.7=m.3
+| -------- |
+| spf.0=g.0 | 
+| spf.1=m.0 |
+| spf.2=g.1 |
+| spf.3=m.1 |
+| spf.4=g.2 |
+| spf.5=m.2 |
+| spf.6=g.3 |
+| spf.7=m.3 |
 
 
 
