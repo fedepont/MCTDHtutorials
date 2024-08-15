@@ -176,7 +176,7 @@ Then the complete state for the system is,
 \]
 
 \begin{eqnarray}
-\Psi_{unsymm}(X_2,R) &=& \phi^{(gauss)}_{0}(X_1) ( C_{1,1} \phi^{(mol)}_{1}(X_2) \chi_{1}(R) + C_{2,2} \phi^{(mol)}_{2}(X_2) \chi_{2}(R) \\
+\Psi_{unsymm}(X_2,R) &=& \phi^{(gauss)}_{0}(X_1) ( C_{0,0} \phi^{(mol)}_{0}(X_2) \chi_{0}(R) + C_{1,1} \phi^{(mol)}_{1}(X_2) \chi_{1}(R) \\
 &+& C_{3,3} \phi^{(mol)}_{2}(X_3) \chi_{3}(R) + C_{4,4} \phi^{(mol)}_{4}(X_2) \chi_{4}(R) )     
 \end{eqnarray}
 
@@ -198,15 +198,22 @@ If you use the symorb=1,2 keyword you get,
 
 | SPFs (X1 and X2)    |
 | -------- |
-| spf.0=g.0 | 
-| spf.1=m.0 |
-| spf.2=g.1 |
-| spf.3=m.1 |
-| spf.4=g.2 |
-| spf.5=m.2 |
-| spf.6=g.3 |
-| spf.7=m.3 |
+| n.0=g.0 | 
+| n.1=m.0 |
+| n.2=g.1 |
+| n.3=m.1 |
+| n.4=g.2 |
+| n.5=m.2 |
+| n.6=g.3 |
+| n.7=m.3 |
 
+And we want this new symmetrized state,
+
+\begin{eqnarray}
+\Psi_{symm}(X_2,R) &=&  C_{0,0} ( \phi^{(n)}_{0}(X_1) \phi^{(n)}_{1}(X_2) + \phi^{(n)}_{1}(X_1) \phi^{(n)}_{0}(X_2))  \chi_{1}(R) 
+&+& C_{1,1} ( \phi^{(n)}_{0}(X_1) \phi^{(n)}_{2}(X_2) + \phi^{(n)}_{2}(X_1) \phi^{(n)}_{0}(X_2) )  \chi_{1}(R) \\
+&+& C_{2,2} ( \phi^{(n)}_{0}(X_1) \phi^{(n)}_{3}(X_2) + \phi^{(n)}_{2}(X_1) \phi^{(n)}_{0}(X_2) )  \chi_{1}(R) 
+\end{eqnarray}
 
 
 
