@@ -164,13 +164,51 @@ It uses the files:
 
 We need to (Anti)symmetrize the electrons in our problem since they are identical particles. Our technical problem here is that we have an expansion for the cation state,
 
-$$\psi(X_2,R) = \sum_{i,j} C_{i,j} \phi^{(mol)}_{i}(X_2) \chi_{j}(R) $$
+\[
+\psi(X_2,R) = \sum_{i,j} C_{i,j} \phi^{(mol)}_{i}(X_2) \chi_{j}(R) 
+\]
+
 
 Then the complete state for the system is,
 
-$$\Psi(X_2,R) = \phi^{(gauss)}_{0}(X_1)\sum_{i,j} C_{i,j} \phi^{(mol)}_{i}(X_2) \chi_{j}(R) $$
+\[
+\Psi(X_2,R) = \phi^{(gauss)}_{0}(X_1)\sum_{i,j} C_{i,j} \phi^{(mol)}_{i}(X_2) \chi_{j}(R)
+\]
 
-$$\Psi(X_2,R) = \phi^{(gauss)}_{0}(X_1) ( C_{1,1} \phi^{(mol)}_{1}(X_2) \chi_{1}(R) + C_{2,2} \phi^{(mol)}_{2}(X_2) \chi_{2}(R) + C_{3,3} \phi^{(mol)}_{2}(X_3) \chi_{3}(R) + C_{4,4} \phi^{(mol)}_{4}(X_2) \chi_{4}(R) ) $$
+\begin{eqnarray}
+\Psi_{unsymm}(X_2,R) &=& \phi^{(gauss)}_{0}(X_1) ( C_{1,1} \phi^{(mol)}_{1}(X_2) \chi_{1}(R) + C_{2,2} \phi^{(mol)}_{2}(X_2) \chi_{2}(R) \\
+&+& C_{3,3} \phi^{(mol)}_{2}(X_3) \chi_{3}(R) + C_{4,4} \phi^{(mol)}_{4}(X_2) \chi_{4}(R) )     
+\end{eqnarray}
+
+\noindent Note that only "Diagonal`` terms ($C_{i,i}$) are shown in the expansion. This is a fact, after calculation, more than a simplification.
+If we want to symmetrize the wave function we need to perform two actions in MCTDH. First $X_1$ and $X_2$ should share SPFs basis since we want to use the identical keyword (id). Second, combine this new SPFs in the initial state so that the electrons are correctly symmetrized.
+
+***First step***
+
+The SPFs for the output from 3  are 
+
+| SPFs (gauss)    | SPFs (mol)|
+| -------- | ------- |
+| $\phi^{(gauss)}_{0}=g.0$  | $\phi^{(mol)}_{0}=m.0$    |
+| $\phi^{(gauss)}_{1}=g.1$ | $\phi^{(mol)}_{1}=m.1$    |
+| $\phi^{(gauss)}_{2}=g.2$   | $\phi^{(mol)}_{2}=m.2$  |
+| $\phi^{(gauss)}_{3}=g.3$   | $\phi^{(mol)}_{3}=m.3$  |
+
+If you use the symorb=1,2 keyword you get,
+
+| SPFs (X1 and X2)    |
+| -------- | ------- |
+| spf.0=g.0  
+| spf.1=m.0 
+| spf.2=g.1 
+| spf.3=m.1 
+| spf.4=g.2
+| spf.5=m.2
+| spf.6=g.3
+| spf.7=m.3
+
+
+
 
 
 **04_run_vlgrid_alpha.sh**
