@@ -1,0 +1,161 @@
+OP_DEFINE-SECTION
+title
+NeHe^+ One Dimensional model to compute icec react. prob. of ICEC.
+end-title
+end-op_define-section
+
+PARAMETER-SECTION
+mass_X1 = 1.d0, au
+mass_X2 = mass_X1
+alphaAe=0.0102, au
+betaAe=0.655, au
+alphaBe=0.0139, au
+betaBe=0.473, au
+betaR=0.01, au
+alphaR=0.01205, au 
+mA=19.9924401754*1822.888486209, au
+mB=7294.29954142, au
+Mtot=mA + mB
+mu=mA*mB/Mtot
+mass_R = mu, au 
+me = mass_X1
+
+beta = 0.01 , au
+alpha = 0.01205 , au
+
+alphaee = 0.02, au 
+betaee = 0.01, au 
+
+muA = mu/mA
+muB = mu/mB
+
+
+
+# To compute 1 electron in diatom in Hamiltonian 1e2N
+# We use distR for the nuclei fixed distance
+distR = 2.0802d0, au
+Aloc = -distR*muA
+Bloc = distR*muB
+distR2 = distR*distR + betaR
+logdistR2 = LOG[ distR2 ]
+logsqrt= 0.5*logdistR2
+rootdR = EXP[ logsqrt ]
+gaussNN = EXP[ -alphaR*distR*distR ]
+intNN = gaussNN/rootdR
+#############################################
+
+end-parameter-section
+
+LABELS-SECTION
+VNNgauss = gauss[alphaR,0.0]
+VNN = regcoul[0.0,betaR]
+VNeA = natpot{./scouVNeA ignore}
+VNeB = natpot{./scouVNeB ignore}
+#Vee = natpot{./scouVee ignore}
+1eVNeAgauss = gauss[alphaAe,Aloc]
+1eVNeBgauss = gauss[alphaBe,Bloc]
+1eVNeAregcou = regcoul[Aloc,betaAe]
+1eVNeBregcou = regcoul[Bloc,betaBe] 
+punch=Exp[PPP,0]
+projg=pgauss[DXX,-172.0]
+ground=external1d{./E1_vs_R501_N501.dat}
+Eaddtrick = gauss[0.0,0.0]
+end-labels-section
+
+
+HAMILTONIAN-SECTION
+-----------------------------------------------------
+modes    |  X1  |  X2  | R 
+-----------------------------------------------------
+1.0      |  1   |  KE  |  1
+1.0      |  1   |  1   |  KE
+1.0      |  1   |  1   | VNN*VNNgauss
+-1.0    |2&3 VNeA
+-1.0    |2&3 VNeB
+----------------------------------------------------
+end-hamiltonian-section
+
+HAMILTONIAN-SECTION_1eNeHeplus
+-----------------------------------------------------
+modes    |  X2  |  R 
+-----------------------------------------------------
+1.0      |  KE  |    1  
+1.0      |  1   |    KE
+1.0      |  1   |   VNN*VNNgauss
+-1.0    |1&2 VNeA
+-1.0    |1&2 VNeB
+----------------------------------------------------
+end-hamiltonian-section
+
+HAMILTONIAN-SECTION_1e2NX1
+usediag
+-----------------------------------------------------
+modes    |  X1
+-----------------------------------------------------
+1.0      |  KE
+-1.0     | 1eVNeAregcou*1eVNeAgauss
+-1.0     | 1eVNeBregcou*1eVNeBgauss
+intNN    | Eaddtrick
+----------------------------------------------------
+end-hamiltonian-section
+
+HAMILTONIAN-SECTION_1e2N
+usediag
+-----------------------------------------------------
+modes    |  X2  
+-----------------------------------------------------
+1.0      |  KE  
+-1.0     | 1eVNeAregcou*1eVNeAgauss
+-1.0     | 1eVNeBregcou*1eVNeBgauss
+intNN    | Eaddtrick
+----------------------------------------------------
+end-hamiltonian-section
+
+HAMILTONIAN-SECTION_ground_state
+-----------------------------------------------------
+modes    |  R   
+-----------------------------------------------------
+1.0      | KE
+1.0      | ground
+#-1.0     | q 
+#1.0      | VNN*VNNgauss
+----------------------------------------------------
+end-hamiltonian-section
+
+HAMILTONIAN-SECTION_punchX1
+-----------------------------------------------------
+modes    |  X1
+-----------------------------------------------------
+1.0      |  punch
+----------------------------------------------------
+end-hamiltonian-section
+
+HAMILTONIAN-SECTION_ProjX1
+-----------------------------------------------------
+modes    |  X1
+-----------------------------------------------------
+1.0      |  projg
+----------------------------------------------------
+end-hamiltonian-section
+
+
+HAMILTONIAN-SECTION_1eNe
+-----------------------------------------------------
+modes    |  X1
+-----------------------------------------------------
+1.0      |  KE
+-1.0     | 1eVNeAregcou*1eVNeAgauss
+----------------------------------------------------
+end-hamiltonian-section
+
+HAMILTONIAN-SECTION_1eHe
+-----------------------------------------------------
+modes    |  X2
+-----------------------------------------------------
+1.0      |  KE
+-1.0     | 1eVNeBregcou*1eVNeBgauss
+----------------------------------------------------
+end-hamiltonian-section
+
+
+end-operator

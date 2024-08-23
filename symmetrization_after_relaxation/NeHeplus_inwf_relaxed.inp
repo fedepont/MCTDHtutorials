@@ -1,0 +1,62 @@
+####################################################################
+RUN-SECTION
+  name=inwf_relaxed
+  #relaxation=lock
+  relaxation=0
+##############Paralellization################################
+#usepthreads = 4,mem-calcha,mem-mfields,summf2,no-hlochphi
+#ptiming # Check ptiming file to control overload, and include
+            # no-* keywords accordingly to suppress inefficiently 
+            # parallelized routines.
+#############################################################
+  tfinal = 1.0   tout = 0.01  tpsi = 0.01
+  #converged= 1.0d-8,ev
+  steps
+  auto
+  gridpop # para showd1d
+  veigen
+  psi
+  cross
+  #energy-not-ev
+end-run-section
+
+OPERATOR-SECTION
+  opname=NeHeplus_relaxation
+end-operator-section
+
+SBASIS-SECTION
+  X1   = 20
+  X2   = 20
+  R     = 18
+  #R     = 14
+end-sbasis-section
+
+PBASIS-SECTION
+  X1     sin  1501  -300.0  300.0 short
+  X2     sin  1501  -300.0  300.0 short
+  R      sin  501  0.0  17.0 short
+end-pbasis-section
+
+INTEGRATOR-SECTION
+CMF = 1.0, 3.0d-3
+RK8/spf = 1.0d-9
+rrDAV/A = 200, 1.0d-8
+natorb
+eps_inv=1.0d-10
+
+end-integrator-section
+
+INIT_WF-SECTION
+build
+  X1 HO 0.0 0.0 0.0
+  X2 eigenf 1e2N pop=1
+  R eigenf ground_state pop=1
+end-build
+
+A-coeff
+ 1 1 1 (1.0,0.0)
+end-A-coeff
+
+end-init_wf-section
+
+end-input
