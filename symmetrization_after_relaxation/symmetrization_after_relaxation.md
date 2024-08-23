@@ -1,15 +1,15 @@
 
 # Symmetrization of electrons after a _partial_ relaxation that includes one electron #
 
-There is a set of script build to run the simulation for a collission between an electron and a molecule with one electron bound. 
+There is a set of scripts to run the simulation for a collission between an electron and a molecule with one electron already binded to it. 
 
-The molecule is described by
-a nuclear distance and the electron coordinate. All in one dimension.
-The objective is to relax the state in the molecule for the correlated coordinates (R and x2), and study the collision of the other electron (x1),
+The molecule is described by a nuclear distance and the electron coordinate. All in one dimension.
+The objective is to relax the state in the molecule for the correlated coordinates (say R and x2), and study the collision of the other electron (x1),
 represented by a gaussian wave packet, against this molecule.
-The trick is to get a totally symmetrized or anti symmetrized state in the electron coordinates.
 
-The are 4 steps
+The trick is to get a *totally (anti-)symmetrized* state in the electron coordinates.
+
+There are 4 steps
 
 ## 01_run_vlgrid_alpha.sh ##
 
