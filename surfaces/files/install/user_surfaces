@@ -1,0 +1,62 @@
+esfera.o : $(PATH_SURFACES)/esfera.f
+	$(FC) $(FFLAGS) -c -o $@ $?
+
+regul6dcou.o : $(PATH_SURFACES)/regul6dcou.f
+	$(FC) $(FFLAGS) -c -o $@ $?
+
+regul4dcou.o : $(PATH_SURFACES)/regul4dcou.f
+	$(FC) $(FFLAGS) -c -o $@ $?
+
+regul2dcou.o : $(PATH_SURFACES)/regul2dcou.f ../source/lib90/core/base.f90
+	$(FC) $(FFLAGS) -c -o $@ $?
+
+quadr6dcou.o : $(PATH_SURFACES)/quadr6dcou.f
+	$(FC) $(FFLAGS) -c -o $@ $?
+
+bexp2dcou.o : $(PATH_SURFACES)/bexp2dcou.f
+	$(FC) $(FFLAGS) -c -o $@ $?
+
+bexp6dcou.o : $(PATH_SURFACES)/bexp6dcou.f
+	$(FC) $(FFLAGS) -c -o $@ $?
+
+invsquare.o : $(PATH_SURFACES)/invsquare.f
+	$(FC) $(FFLAGS) -c -o $@ $?
+
+eff2dcou.o : $(PATH_SURFACES)/eff2dcou.f
+	$(FC) $(FFLAGS) -c -o $@ $?
+
+rigid.o : $(PATH_SURFACES)/rigid.f
+	$(FC) $(FFLAGS) -c -o $@ $?
+
+gscou.o : $(PATH_SURFACES)/gscou.f
+	$(FC) $(FFLAGS) -c -o $@ $?
+
+expscou.o : $(PATH_SURFACES)/expscou.f
+	$(FC) $(FFLAGS) -c -o $@ $?
+
+erfcou2d.o : $(PATH_SURFACES)/erfcou2d.f
+	$(FC) $(FFLAGS) -c -o $@ $?
+
+veff2dsw.o : $(PATH_SURFACES)/veff2dsw.f
+	$(FC) $(FFLAGS) -c -o $@ $?
+
+
+# This file, user_surfaces, is included into the Makefile.
+#
+# Add here new potential energy surfaces. If a PES depends on include or
+# other files, this dependency must be accounted for here! E.g.:
+#
+# newpes.o : $(PATH_SURFACES)/newpes.F   $(PATH_INC)/paths.inc
+#	  $(FC) $(FFLAGS) -c -o $@ $(PATH_SURFACES)/newpes.F
+#
+# In general, a simpler form is sufficient:
+#
+# newpes.o : $(PATH_SURFACES)/newpes.f
+#	  $(FC) $(FFLAGS) -c -o $@ $?
+#
+# Note that the second line MUST start with a TAP and not with a series
+# of blanks!
+#
+# Do not forget to include the corresponding default PES (DEF_...)
+# in file install/user_surfdef and in the source/surfaces directory.
+
